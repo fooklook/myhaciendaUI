@@ -1,0 +1,79 @@
+
+/* 导航主题颜色 */
+.navbar-blog{
+	background: rgba(255,255,255,0.4);
+    border-color: #080808;
+    min-height: 80px;
+}
+.navbar-brand-blog{
+	font-size: 36px;
+	line-height: 80px;
+	color: #330000 ;
+}
+.navbar-nav li{
+	font-size: 20px;
+	line-height: 80px;
+	height: 80px;
+}
+	.navbar-nav li a{
+		font-size: 20px;
+		line-height: 50px;
+		color: #330000 ;
+	}
+.navbar-toggle{
+	background: rgba(255,255,255,0.4);
+	margin-top: 20px;
+	border-color: #330000 ;
+	color: #330000 ;
+}
+/* 单元显示 */
+.blog-item{
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	border-radius: 8px 8px 8px 8px;
+	margin-top:20px;
+}
+.blog-item:hover{
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+.blog-item .blog-img{
+	height: 200px;
+	overflow: hidden;
+	background-position: center center;
+	border-radius: 8px 8px 0px 0px;
+}
+	.blog-item .blog-img .blog-num{
+		background: rgba(102, 0, 51, 0.4);
+		color: #fff;
+		display: inline-block;
+		border-radius: 4px;
+		padding:4px;
+		margin:10px 16px;
+	}
+.blog-msg{
+	margin: 5px;
+	padding: 5px;
+	height: 80px;
+	text-indent: 2em;
+}
+.blog-append{
+	height: 40px;
+	padding-top: 10px;
+	border-top: 1px solid #DDDDDD;
+	overflow: hidden;
+	background-color: #f7faf8;
+	border-radius: 0px 0px 8px 8px;
+}
+	.blog-append div.blog-click{
+		padding-left: 20px;
+		display: inline-block;
+	}
+	.blog-append div.blog-look{
+		padding-right: 20px;
+		display: inline-block;
+		float: right;
+	}
+
+/* 尾部 */
+footer{
+	margin-top: 20px;
+}
