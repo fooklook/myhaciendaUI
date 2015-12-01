@@ -1,4 +1,6 @@
-
+a{
+	border: 0px;
+}
 /* 导航主题颜色 */
 .navbar-blog{
 	background: rgba(255,255,255,0.4);
@@ -77,3 +79,55 @@
 footer{
 	margin-top: 20px;
 }
+/* view 页面样式*/
+.tablecloth{
+	background-image: url(../images/bigbg-001.png);
+	background-color: #dfdfe1;
+}
+.blog-view-header{
+    max-width: 800px;
+    background: #fff none repeat scroll 0 0;
+    margin: 60px auto 40px;
+    overflow: hidden;
+    padding: 25px 30px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+}
+	.blog-view-header .home{
+		font-size: 32px;
+	}
+		.blog-view-header .home .home-font{
+			font-size: 16px;
+			border-radius: 100%;
+		}
+	.blog-view-header .homelogo{
+
+	}
+		.blog-view-header .homelogo .logo-main{
+			display: inline-block;
+			float: left;
+		}
+
+		.blog-view-header .homelogo .logo-main-img{
+			width: 120px;
+			border-radius: 100px;
+		}
+		.blog-view-header .homelogo .logo-main-title{
+			font-size: 46px;
+			margin-left: 20px;
+		}
+		.blog-view-header .homelogo .logo-main-click{
+			margin-left: 24px;
+		}
+.blog-view-container{
+	max-width: 800px;
+	background: #fff none repeat scroll 0 0;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    padding: 25px 30px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+}
+	.blog-view-container .blog-view-body-img{
+		display: block;
+    	width: 100%;
+    	margin-bottom: 5px;
+	}
