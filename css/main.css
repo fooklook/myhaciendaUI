@@ -4,7 +4,6 @@ a{
 /* 导航主题颜色 */
 .navbar-blog{
 	background: rgba(255,255,255,0.4);
-    border-color: #080808;
     min-height: 80px;
 }
 .navbar-brand-blog{
@@ -22,12 +21,17 @@ a{
 		line-height: 50px;
 		color: #330000 ;
 	}
+	.navbar-nav li a:hover{
+		background-color:rgba(255,250,240,0.2); 
+		border-radius: 15px;
+	}
 .navbar-toggle{
 	background: rgba(255,255,255,0.4);
 	margin-top: 20px;
 	border-color: #330000 ;
 	color: #330000 ;
 }
+
 /* 单元显示 */
 .blog-item{
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -131,3 +135,8 @@ footer{
     	width: 100%;
     	margin-bottom: 5px;
 	}
+
+/* 轮播图效果 */
+.swiper-container .swiper-wrapper .swiper-slide img{
+	width:100%;
+}
