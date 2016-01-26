@@ -137,6 +137,9 @@ footer{
 	}
 
 /* 轮播图效果 */
+.swiper-container .swiper-wrapper{
+	max-height: 1010px;
+}
 .swiper-container .swiper-wrapper .swiper-slide img{
 	width:100%;
 }
