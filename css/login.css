@@ -1,0 +1,134 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font-family: "微软雅黑",Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.main-container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+    .main-container .main-box{
+        margin: 150px auto 0px;
+		width:300px;
+        1background: #fff;
+    }
+        .main-container .main-box .logo{
+            text-align: center;
+            color: #fff;
+			text-align: center;
+			margin-bottom: 10px;
+        }
+            .main-container .main-box .logo .logo-name{
+                font-size: 50px;
+                font-weight: 800;
+				position:relative;
+            }
+			.main-container .main-box .logo .logo-name:after{
+				content:"2016年纪元";
+				position:absolute;
+				right:-10px;
+				top:-10px;
+				font-size:16px;
+				font-weight:100;
+			}
+            .main-container .main-box .logo .logo-motto{
+                letter-spacing: 20px;
+				
+            }
+		.main-container .main-box .input-box{
+			width:100%;
+		}
+			.main-container .main-box .input-box .button-group{
+				width:100%;
+				height:40px;
+				background-color: rgba(17, 17, 17, 0.5);
+				text-align:center;
+			}
+				.main-container .main-box .input-box .button-group a{
+					text-decoration:none;
+					color: rgba(255, 255, 255, 0.5);
+					font-size:18px;
+					display:block;
+					float:left;
+					width:50%;
+					line-height:40px;
+				}
+				.main-container .main-box .input-box .button-group a.onclick{
+					background: #fff;
+					color: #444;
+				}
+			.main-container .main-box .input-box .box-container{
+				min-height:150px;
+				width: 260px;
+				background: #fff;
+				padding: 10px 20px;
+			}
+				.main-container .main-box .input-box .box-container .group-input{
+					margin: 4px 0px;
+					position: relative;
+					color: #777;
+				}
+					.main-container .main-box .input-box .box-container .group-input a{
+						font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+						color: #777;
+						text-decoration: none;
+					}
+					.main-container .main-box .input-box .box-container .group-input input.input-in{
+							border: 1px solid #d7d7d7;
+							padding: 8px 16px;
+							width: 225px;
+					}
+					.main-container .main-box .input-box .box-container .group-input a.eye{
+						position:absolute;
+						right:10px;
+						top:8px;
+					}
+					.main-container .main-box .input-box .box-container .group-button input{
+						background-position: -1px -461px;
+						background: #529D0D;
+						border: 0 none;
+						color: #fff;
+						display: inline-block;
+						font-size: 18px;
+						height: 40px;
+						line-height: 40px;
+						text-align: center;
+						width: 260px;
+					}
+					.main-container .main-box .input-box .box-container .group-input .forget{
+						display:inline-block;
+						float:right;	
+					}
