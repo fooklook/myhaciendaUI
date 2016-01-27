@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./favicon.ico">
+    <title>Fooklook</title>
+    <link href="assets/swiper/swiper-3.3.0.min.css" rel="stylesheet" />
+    <link href="assets/fontawesome4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:url(http://7xp3vm.com1.z0.glb.clouddn.com/bg-001.jpg) no-repeat center center"></div>
+            <div class="swiper-slide" style="background:url(http://7xp3vm.com1.z0.glb.clouddn.com/bg-001.jpg) no-repeat center center"></div>
+            <div class="swiper-slide" style="background:url(http://7xp3vm.com1.z0.glb.clouddn.com/bg-001.jpg) no-repeat center center"></div>
+            <div class="swiper-slide" style="background:url(http://7xp3vm.com1.z0.glb.clouddn.com/bg-001.jpg) no-repeat center center"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="main-container">
+        <div class="main-box">
+            <div class="logo">
+                <div><a href="#">找回密码</a></div>
+            </div>
+            <div class="input-box">
+                <div class="login-box box-container">
+                	<form enctype="text/plain" method="post" action="">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                	<div class="group-input">
+                    	<input class="input-in" type="email" name="user_email" placeholder="请输入邮箱地址" />
+                    </div>
+                    <div class="group-code">
+                    	<input class="input-in" type="password" name="user_password" placeholder="密码" />
+                        <span class="refresh"><span class="fa fa-refresh"></span><img src="./images/code.png" /></span>
+                    </div>
+                    <div class="input-error">邮箱地址错误</div>
+                    <div class="group-button"><input type="submit" value="提交" name="submit_button" /></div>
+                	</form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/swiper/swiper-3.3.0.jquery.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay: 5000,//可选选项，自动滑动
+        loop : true,
+    });
+    </script>
+  </body>
+  </html>

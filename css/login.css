@@ -98,7 +98,7 @@ body {
 				background: #fff;
 				padding: 10px 20px;
 			}
-				.main-container .main-box .input-box .box-container .group-input{
+				.main-container .main-box .input-box .box-container .group-input,.main-container .main-box .input-box .box-container .group-code{
 					margin: 4px 0px;
 					position: relative;
 					color: #777;
@@ -108,11 +108,28 @@ body {
 						color: #777;
 						text-decoration: none;
 					}
-					.main-container .main-box .input-box .box-container .group-input input.input-in{
+					.main-container .main-box .input-box .box-container .group-input input.input-in,.main-container .main-box .input-box .box-container .group-code input.input-in{
 							border: 1px solid #d7d7d7;
 							padding: 8px 16px;
 							width: 225px;
 					}
+					.main-container .main-box .input-box .box-container .group-code input.input-in{
+						width:80px;	
+					}
+					.main-container .main-box .input-box .box-container .group-code .refresh{
+						line-height:35px;
+						width:130px;
+						height:35px;
+						float:right;
+						display:block;
+						font-size:30px;
+					}
+						.main-container .main-box .input-box .box-container .group-code .refresh span{
+							display:inline-block;
+							position:relative;
+							top:-5px;
+							left:-2px;
+						}
 					.main-container .main-box .input-box .box-container .group-input a.eye{
 						position:absolute;
 						right:10px;
