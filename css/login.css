@@ -46,7 +46,8 @@ body {
 		width:300px;
         1background: #fff;
     }
-        .main-container .main-box .logo{
+        .main-container .main-box .logo,.logo a{
+			text-decoration:none;
             text-align: center;
             color: #fff;
 			text-align: center;
