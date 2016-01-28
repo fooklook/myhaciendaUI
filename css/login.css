@@ -10,6 +10,10 @@ body {
     margin: 0;
     padding: 0;
 }
+a{
+	text-decoration:none;
+	color:#84a099;
+}
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -59,7 +63,7 @@ body {
 				position:relative;
             }
 			.main-container .main-box .logo .logo-name:after{
-				content:"2016年纪元";
+				content:"丙申年纪元";
 				position:absolute;
 				right:-10px;
 				top:-10px;
@@ -135,7 +139,8 @@ body {
 						right:10px;
 						top:8px;
 					}
-					.main-container .main-box .input-box .box-container .group-button input{
+					.main-container .main-box .input-box .box-container .group-button input,.box-container .returnindex a{
+						text-decoration:none;
 						background: #529D0D;
 						border: 0 none;
 						color: #fff;
@@ -145,6 +150,10 @@ body {
 						line-height: 40px;
 						text-align: center;
 						width: 260px;
+					}
+					.box-container .remind{
+						text-align:center;
+						min-height:50px;
 					}
 					.main-container .main-box .input-box .box-container .group-input .forget{
 						display:inline-block;
