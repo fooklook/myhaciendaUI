@@ -36,32 +36,39 @@
                     <a class="register-button" href="javascript:void(0);">注册</a>
                 </div>
                 <div class="login-box box-container">
-                	<form enctype="text/plain" method="post" action="">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                	<div class="group-input">
-                    	<input class="input-in" type="email" name="user_email" placeholder="邮箱地址" />
-                    </div>
-                    <div class="group-input">
-                    	<input class="input-in" type="password" name="user_password" placeholder="密码" />
-                        <a class="eye a-fa-eye" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
-                        <a class="eye a-fa-eye-slash" href="javascript:void(0);" style="display:none;"><i class="fa fa-eye-slash"></i></a>
-                    </div>
-                    <div class="group-button"><input type="submit" value="登录" name="submit_button" /></div>
-                    <div class="group-input"><input type="checkbox" name="remember" />记住密码 <span class="forget"><a href="javascript:void(0);">忘记密码</a></span></div>
+                	<form role="form" method="post" action="" name="login" id="login">
+                        <input type="hidden" name="_token" value="">
+                        <div class="group-input">
+                            <input class="input-in" type="email" name="user_email" value="" placeholder="邮箱地址" datatype="e" errormsg="邮箱地址格式错误！" nullmsg="请输入邮件地址。" />
+                        </div>
+                        <div class="group-input">
+                            <input class="input-in" type="password" name="user_password" placeholder="密码" datatype="*6-18" errormsg="密码长度为6-18位。" nullmsg="请输入6-18位密码。" />
+                            <a class="eye a-fa-eye" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
+                            <a class="eye a-fa-eye-slash" href="javascript:void(0);" style="display:none;"><i class="fa fa-eye-slash"></i></a>
+                        </div>
+                        <div class="group-input errors"></div>
+                        <div class="group-button"><input type="submit" value="登录" name="submit_button" id="login_sub" /></div>
+                        <div class="group-input"><input type="checkbox" name="remember" />记住密码 <span class="forget"><a href="javascript:void(0);">忘记密码</a></span></div>
                 	</form>
                 </div>
                 <div class="register-box box-container" style="display:none;">
-                	<form enctype="text/plain" method="post" action="">
-                    <div class="group-input">
-                    	<input class="input-in" type="email" name="user_email" placeholder="注册邮箱地址" />
-                    </div>
-                    <div class="group-input">
-                    	<input class="input-in" type="password" name="user_password" placeholder="注册密码" />
-                        <a class="eye a-fa-eye" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
-                        <a class="eye a-fa-eye-slash" href="javascript:void(0);" style="display:none;"><i class="fa fa-eye-slash"></i></a>
-                    </div>
-                    <div class="group-button"><input type="submit" value="注册" name="submit_button" /></div>
-                	</form>
+                    <form role="form" method="post" action="" name="register" id="register">
+                        <input type="hidden" name="_token" value="">
+                        <div class="group-input">
+                            <input class="input-in" type="email" name="user_email" value="" placeholder="注册邮箱地址" datatype="e" errormsg="邮箱地址格式错误！" nullmsg="请输入邮件地址。"/>
+                        </div>
+                        <div class="group-input">
+                            <input class="input-in" type="password" name="user_password" value="" placeholder="注册密码" datatype="*6-18" errormsg="密码长度为6-18位。" nullmsg="请输入6-18位密码。"/>
+                            <a class="eye a-fa-eye" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
+                            <a class="eye a-fa-eye-slash" href="javascript:void(0);" style="display:none;"><i class="fa fa-eye-slash"></i></a>
+                        </div>
+                        <div class="group-code">
+                            <input class="input-in" type="password" name="authcode" placeholder="验证码" datatype="*4-6" errormsg="请输入验证码。" nullmsg="请输入验证码。" />
+                            <span id="auth-code" class="refresh"><span class="fa fa-refresh"></span><img src="http://fooklook.net/auth/authcode" /></span>
+                        </div>
+                        <div class="group-input errors"></div>
+                        <div class="group-button"><input type="submit" value="注册"  id="register_sub"/></div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -70,26 +77,55 @@
     <!-- Swiper JS -->
     <script src="assets/jquery/jquery.min.js"></script>
     <script src="assets/swiper/swiper-3.3.0.jquery.min.js"></script>
+    <script src="assets/Validform/Validform_v5.3.2_min.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
-	$(function(){
-		//切换登录与注册
-		$(".button-group a").click(function(){
-			$(this).addClass('onclick').siblings().removeClass('onclick');
-			$(".box-container").hide();
-			$(".box-container:eq("+$(this).index()+")").show();
-		});
-		//显示密码
-		$("a.a-fa-eye").click(function(){
-			$(this).hide().siblings("a").show();
-			$(this).siblings("input").attr('type','text');
-		});
-		//隐藏密码
-		$("a.a-fa-eye-slash").click(function(){
-			$(this).hide().siblings("a").show();
-			$(this).siblings("input").attr('type','password');
-		});
+    $(function(){
+        //切换登录与注册
+        $(".button-group a").click(function(){
+            $(this).addClass('onclick').siblings().removeClass('onclick');
+            $(".box-container").hide();
+            $(".box-container:eq("+$(this).index()+")").show();
+        });
+        //显示密码
+        $("a.a-fa-eye").click(function(){
+            $(this).hide().siblings("a").show();
+            $(this).siblings("input").attr('type','text');
+        });
+        //隐藏密码
+        $("a.a-fa-eye-slash").click(function(){
+            $(this).hide().siblings("a").show();
+            $(this).siblings("input").attr('type','password');
+        });
+        //点击获取验证码
+        $("#auth-code").click(function(){
+            $(this).find('img').attr('src',$(this).find('img').attr('src')+"?code="+Math.random());
+        });
+        //判断显示，如果.errors存在内容，则该内框显示。
+        var index = 0;
+        $(".errors").each(function(){
+            if($.trim($(this).text()) != ""){
+                $(".button-group a:eq("+index+")").trigger("click");
+            }
+            index++;
+        });
+    });
+	$("#register").Validform({
+		btnSubmit:"#register_sub", 
+		tiptype:function(msg,o,cssctl){
+			if(o.type ==3){
+				o.curform.find('.errors').text(msg);
+			}
+		}
+	});
+	$("#login").Validform({
+		btnSubmit:"#login_sub", 
+		tiptype:function(msg,o,cssctl){
+			if(o.type ==3){
+				o.curform.find('.errors').text(msg);
+			}
+		}
 	});
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
@@ -97,6 +133,6 @@
         autoplay: 5000,//可选选项，自动滑动
         loop : true,
     });
-    </script>
+</script>
   </body>
   </html>
