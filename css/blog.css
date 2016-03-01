@@ -1,0 +1,42 @@
+#blog-nav{
+
+}
+	#blog-nav ul{
+		list-style: none;
+		margin: 0px;
+		padding:0px;
+	}
+		#blog-nav ul li{
+			float: left;
+			margin: 0px;
+			padding: 0px;
+			overflow: hidden;
+			text-align: center;
+			margin-top: 10px;
+			position: relative;
+		}
+		#blog-nav ul li.click:before{
+			content: "┌";
+			position: absolute;
+			top: -10px;
+			left: 0px;
+			font-size: 30px;
+			font-weight: 800;
+		}
+		#blog-nav ul li.click:after{
+			content: "┘";
+			position: absolute;
+			bottom: -10px;
+			right: 10px;
+			font-size: 30px;
+			font-weight: 800;
+		}
+			#blog-nav ul li img{
+				width:90%;
+				border-radius: 5px;
+			}
+	.blog-view-list .blog-list .blog-title{
+		height: 30px;
+		line-height: 30px;
+	}
+			
