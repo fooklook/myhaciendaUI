@@ -4,5 +4,8 @@
     "gulp": "^3.8.8",
     "bootstrap": "",
     "jquery": ""
+  },
+  "dependencies": {
+    "marked": "^0.3.5"
   }
 }
